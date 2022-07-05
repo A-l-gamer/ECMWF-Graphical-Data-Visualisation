@@ -18,22 +18,22 @@ To get a suitable .json file, the easiest way is by converting a .grib file from
 
 The tool should guide you in converting the .grib file into a .json file, which will be stored in the same file as the GribToJson python converter.
 
-NB: Because both the converter and blender later expect files to be in the same directory as them, please keep all of the files inculded and produced by this tool in the same folder.
+> NB: Because both the converter and blender later expect files to be in the same directory as them, please keep all of the files inculded and produced by this tool in the same folder.
 
 ## Using Json to Display the Data
 Once a suitable .json file is sourced, you can now open blender to display the data from the json file.
 
-NB: For each point plotted, a new object and a new material are formed. Thus, please be mindful that the process may take a while, especially if the nuumber of points is in the thousands.
+> NB: For each point plotted, a new object and a new material are formed. Thus, please be mindful that the process may take a while, especially if the nuumber of points is in the thousands.
 
 When blender is opened, there is a chance of the earth not recocnising the texture and looking something like this:
 <img width="1024" alt="Screenshot 2022-07-05 at 14 00 16" src="https://user-images.githubusercontent.com/79207038/177334346-6733b56b-7462-4f4c-8a88-dfa12037c13c.png">
 
-If that is the case, the fix is to re-assign the texture. This can be done by: 
-> Going to the Shading Tab;
-> Selecting the earth through the Scene Collection;
-> Clicking the folder icon in the Image Texture node;
-> Going to the BlendersTextures folder in the ECMWF Blender Grib Visualisation folder;
-> Selecting either image. Both images are the same, one was just colour adjusted.
+If that is the case, the fix is to re-assign the texture: 
+1. Go to the Shading Tab;
+2. Select the earth through the Scene Collection;
+3. Click the folder icon in the Image Texture node;
+4. Go to the BlendersTextures folder in the ECMWF Blender Grib Visualisation folder;
+5. Select either image. Both images are the same, one was just colour adjusted.
 
 <img width="1920" alt="Screenshot 2022-07-05 at 14 11 00" src="https://user-images.githubusercontent.com/79207038/177340059-4802cff0-3ff0-4a65-a0c2-8d39df07baf2.png">
 
@@ -50,8 +50,18 @@ To run the script, just press the arrow button:
 To use your own custom .json files displaying the specific data you need, you have to specify the name of the .json file by hardcoding it in the fileName variable:
 <img width="1747" alt="Screenshot 2022-07-05 at 14 01 09" src="https://user-images.githubusercontent.com/79207038/177334365-8c9c58ea-fa51-4bce-9edf-581dc884ec34.png">
 
-NB: As stated earlier, blender will assume that the .json file is stored in the same folder as the blender, and will yield an error otherwise.
+> NB: As stated earlier, blender will assume that the .json file is stored in the same folder as the blender, and will yield an error otherwise.
 
 Once the program is run, blender will execute it, and no visual changes occours until every step is executed. The render will therfore be located in the Render folder within the ECMWF Blender Grib Visualisation folder.
 
 If you want to run it again, as long as you use the LaunchAll() function, all generated materials and objects will be deleted. Thus, there is no need for manual clean-up.
+
+## Testing
+Because this is a week-long project, the testing was unfortunately limited.
+
+However, I tried two different .grib files to begin with; plotted multiple areas; tested all functions individually; and saved multiple renders.
+
+Also, the versions used were:
+* macOS BigSur v11.6.5 on a 2013 Macbook Pro
+* Python 3.10
+* Blender 3.2.0
