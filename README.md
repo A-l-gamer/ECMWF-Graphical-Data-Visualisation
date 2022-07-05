@@ -20,11 +20,12 @@ The tool should guide you in converting the .grib file into a .json file, which 
 
 > NB: Because both the converter and blender later expect files to be in the same directory as them, please keep all of the files inculded and produced by this tool in the same folder.
 
-## Using Json to Display the Data
-Once a suitable .json file is sourced, you can now open blender to display the data from the json file.
+## Using Blender to Display the Data
+Once a suitable .json file is sourced, you can now open blender to display the data from the json file. When it is the first time using blender, you may need to set it up accordingly. After that, you should always be able to use either the manual or the automatic system to plot the data.
 
 > NB: For each point plotted, a new object and a new material are formed. Thus, please be mindful that the process may take a while, especially if the nuumber of points is in the thousands.
 
+### 1st Time Blender Set-Up
 When blender is opened, there is a chance of the earth not recocnising the texture and looking something like this:
 <img width="1024" alt="Screenshot 2022-07-05 at 14 00 16" src="https://user-images.githubusercontent.com/79207038/177334346-6733b56b-7462-4f4c-8a88-dfa12037c13c.png">
 
@@ -36,6 +37,11 @@ If that is the case, the fix is to re-assign the texture:
 5. Select either image. Both images are the same, one was just colour adjusted.
 
 <img width="1920" alt="Screenshot 2022-07-05 at 14 11 00" src="https://user-images.githubusercontent.com/79207038/177340059-4802cff0-3ff0-4a65-a0c2-8d39df07baf2.png">
+
+Once all five steps are completed, the set-up is done and the tool can be used. You should not need to repeat these steps again unless you move the folders around...
+
+### Manual Procedure
+The manual procedures involve more steps and functions. Therfore, they both lead to a more complex procedure but more flexibilty. Manual is recomended for those who feel comfortable with programming and need a more particular execution. Otherwise, please use the automatic system outlined after.
 
 Once the center sphere is looking like the earth, you can plot the points over it. Firstly, you need to change to the Scripting tab and select the Hub.py script from the dropdown:
 <img width="1761" alt="Screenshot 2022-07-05 at 14 03 05" src="https://user-images.githubusercontent.com/79207038/177334370-a064ae91-46c1-4444-9e48-da70ce264d52.png">
@@ -56,6 +62,10 @@ Once the program is run, blender will execute it, and no visual changes occours 
 
 If you want to run it again, as long as you use the LaunchAll() function, all generated materials and objects will be deleted. Thus, there is no need for manual clean-up.
 
+### Automatic Procedure
+
+ still needs to be implemented, thank you for your patience 
+
 ## Testing
 Because this is a week-long project, the testing was unfortunately limited.
 
@@ -65,3 +75,7 @@ Also, the versions used were:
 * macOS BigSur v11.6.5 on a 2013 Macbook Pro
 * Python 3.10
 * Blender 3.2.0
+
+Although one can never assure anything, please use the above stated python and blender versions (or later).
+
+For the operating system, the tool (although not yet tested) should work for Windows 10 (or later) too.
